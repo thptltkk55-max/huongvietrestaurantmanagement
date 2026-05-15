@@ -236,14 +236,9 @@ huongviet/
 │   ├── food_detail.php
 │   └── menu.php
 │
-├── database.sql
-├── database_update_admin.sql
-├── database_update_booking.sql
-├── database_update_contact.sql
-├── database_update_customers.sql
-├── database_update_inventory.sql
-├── database_update_orders.sql
-├── database_update_service.sql
+├── importthisfile/
+│   └── huongviet.sql
+│
 ├── index.php
 └── README.md
 ```
@@ -257,6 +252,14 @@ Database sử dụng:
 ```sql
 huongviet
 ```
+
+File database để import nằm tại:
+
+```plaintext
+importthisfile/huongviet.sql
+```
+
+File này là bản xuất đầy đủ từ phpMyAdmin, dùng để người khác import nhanh vào MySQL/XAMPP.
 
 Một số bảng chính:
 
@@ -315,23 +318,26 @@ CREATE DATABASE huongviet CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 ### Bước 5: Import database
 
-Import file chính:
+Import file database đã xuất sẵn trong project:
 
 ```plaintext
-database.sql
+importthisfile/huongviet.sql
 ```
 
-Nếu có các file update database, import thêm theo thứ tự:
+Cách import:
+
+1. Mở phpMyAdmin.
+2. Chọn database `huongviet`.
+3. Chọn tab **Nhập / Import**.
+4. Chọn file:
 
 ```plaintext
-database_update_admin.sql
-database_update_booking.sql
-database_update_contact.sql
-database_update_customers.sql
-database_update_inventory.sql
-database_update_orders.sql
-database_update_service.sql
+importthisfile/huongviet.sql
 ```
+
+5. Bấm **Thực hiện / Go**.
+
+File `huongviet.sql` là bản export toàn bộ database hiện tại, bao gồm cấu trúc bảng và dữ liệu mẫu. Vì vậy chỉ cần import file này, không cần import thêm các file update riêng lẻ.
 
 ### Bước 6: Cấu hình database
 
@@ -460,6 +466,12 @@ Project được thực hiện bởi sinh viên trong quá trình học lập tr
 ## 12. Ghi chú
 
 Dự án phục vụ mục đích học tập, mô phỏng hệ thống website và quản lý nhà hàng Hương Việt.
+
+Khi chia sẻ project cho người khác, chỉ cần hướng dẫn họ import file:
+
+```plaintext
+importthisfile/huongviet.sql
+```
 
 Các chức năng có thể tiếp tục mở rộng:
 
