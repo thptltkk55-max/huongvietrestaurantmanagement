@@ -1,0 +1,9 @@
+.contact-message-box,
+.bg-light.rounded.border {
+    line-height: 1.7;
+    color: #334155;
+}
+
+.contacts-subject-cell {
+    max-width: 260px;
+}

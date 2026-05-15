@@ -1,0 +1,1278 @@
+/* CSS rieng cho trang chu */
+
+body {
+    background-color: #f8f1e7;
+}
+
+/* Khu vuc mon an noi bat */
+.featured-section {
+    padding: 58px 16px 64px;
+    background-color: #fffaf2;
+    text-align: center;
+}
+
+.featured-heading {
+    margin-bottom: 30px;
+}
+
+.featured-heading p {
+    margin: 0 0 8px;
+    color: #c43125;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.featured-heading h2 {
+    margin: 0;
+    color: #1f6f43;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.featured-slider {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.featured-pages {
+    width: 100%;
+    min-height: 285px;
+    position: relative;
+}
+
+.featured-page {
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(18px);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+}
+
+.featured-page:not(.active) {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.featured-page.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.featured-card {
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 10px 24px rgba(25, 48, 31, 0.13);
+}
+
+.featured-card-image {
+    aspect-ratio: 4 / 3;
+    background-color: #eeeeee;
+}
+
+.featured-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.featured-card h3 {
+    min-height: 58px;
+    margin: 0;
+    padding: 14px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f6f43;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.featured-nav {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    border: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c43125;
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(196, 49, 37, 0.24);
+    transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.featured-nav:hover:not(:disabled) {
+    background-color: #a8261d;
+    transform: translateY(-1px);
+}
+
+.featured-nav:disabled {
+    cursor: default;
+    opacity: 0.45;
+}
+
+.featured-nav i {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.featured-more {
+    margin-top: 34px;
+    padding: 12px 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background-color: #c43125;
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.featured-more:hover {
+    background-color: #a8261d;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.featured-empty {
+    margin: 0;
+    padding: 44px 16px;
+    color: #555555;
+    font-size: 17px;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .featured-heading h2 {
+        font-size: 34px;
+    }
+
+    .featured-slider {
+        gap: 14px;
+    }
+
+    .featured-pages {
+        min-height: 560px;
+    }
+
+    .featured-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .featured-section {
+        padding: 44px 12px 52px;
+    }
+
+    .featured-heading p {
+        font-size: 19px;
+    }
+
+    .featured-heading h2 {
+        font-size: 30px;
+    }
+
+    .featured-slider {
+        gap: 8px;
+    }
+
+    .featured-pages {
+        min-height: 0;
+    }
+
+    .featured-page:not(.active) {
+        position: absolute;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .featured-card h3 {
+        min-height: 54px;
+        font-size: 16px;
+    }
+
+    .featured-nav {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+    }
+
+    .featured-nav i {
+        font-size: 21px;
+    }
+}
+
+/* Khu vuc thuc don chinh */
+.main-menu-section {
+    padding: 50px 0 70px;
+    background: #f7f7f7;
+}
+
+.main-menu-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-menu-heading p {
+    margin: 0 0 8px;
+    color: #e21d1d;
+    font-size: 26px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.main-menu-heading h2 {
+    margin: 0;
+    color: #009fe3;
+    font-size: 46px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.main-menu-wrapper {
+    width: min(1150px, 94%);
+    margin: 0 auto;
+    position: relative;
+}
+
+.main-menu-book {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+    background-image: url("/huongviet/assets/images/featured_bg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+.main-menu-page {
+    display: none;
+    position: absolute;
+    inset: 0;
+    animation: mainMenuFade 0.35s ease;
+}
+
+.main-menu-page.active {
+    display: block;
+}
+
+@keyframes mainMenuFade {
+    from {
+        opacity: 0.3;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.book-left-content {
+    position: absolute;
+    top: 15%;
+    left: 7%;
+    width: 39%;
+    height: 70%;
+    padding: 15px 22px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.book-right-content {
+    position: absolute;
+    top: 15%;
+    right: 7%;
+    width: 39%;
+    height: 70%;
+    padding: 15px 22px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.main-menu-category {
+    margin-bottom: 22px;
+}
+
+.main-menu-category h3 {
+    width: 70%;
+    margin: 0 auto 12px;
+    padding: 8px 15px;
+    background: #009fe3;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-menu-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu-category li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+    font-size: 14px;
+}
+
+.main-dish-name {
+    max-width: 68%;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.main-dish-price {
+    color: #ff2020;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.main-menu-nav {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: rgba(0, 0, 0, 0.35);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.main-menu-nav:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.main-menu-prev {
+    left: 1%;
+}
+
+.main-menu-next {
+    right: 1%;
+}
+
+@media (max-width: 991.98px) {
+    .main-menu-heading h2 {
+        font-size: 38px;
+    }
+
+    .book-left-content,
+    .book-right-content {
+        padding: 12px 16px;
+    }
+
+    .main-menu-category h3 {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+
+    .main-menu-category li {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-menu-book {
+        aspect-ratio: auto;
+        min-height: 0;
+        padding: 16px;
+        background-image: none;
+        background-color: transparent;
+        overflow: visible;
+    }
+
+    .main-menu-page {
+        position: static;
+    }
+
+    .main-menu-page.active {
+        display: grid;
+        gap: 16px;
+    }
+
+    .book-left-content,
+    .book-right-content {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 18px;
+        background-color: #222;
+        overflow: visible;
+    }
+
+    .main-dish-name {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-menu-section {
+        padding: 40px 0 52px;
+    }
+
+    .main-menu-heading p {
+        font-size: 21px;
+    }
+
+    .main-menu-heading h2 {
+        font-size: 30px;
+    }
+
+    .main-menu-category h3 {
+        width: 82%;
+        font-size: 13px;
+    }
+
+    .main-menu-category li {
+        font-size: 13px;
+    }
+
+    .main-menu-nav {
+        width: 34px;
+        height: 34px;
+        font-size: 19px;
+    }
+}
+
+/* Khu vuc book ban trang chu */
+.home-booking-section {
+    padding: 60px 16px;
+    background-color: #ffffff;
+}
+
+.home-booking-container {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 58% 42%;
+    align-items: stretch;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+.home-booking-image {
+    min-height: 500px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.home-booking-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    display: block;
+    object-fit: cover;
+    box-shadow: inset 0 0 0 2px #ffffff;
+}
+
+.home-booking-form-box {
+    padding: 45px 50px;
+    position: relative;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.home-booking-form-box h2 {
+    margin: 0 0 10px;
+    color: #009fe3;
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.home-booking-form-box p {
+    margin: 0 0 24px;
+    color: #333333;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.home-booking-form {
+    position: relative;
+    z-index: 1;
+}
+
+.home-booking-form input,
+.home-booking-form textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 14px;
+    outline: none;
+}
+
+.home-booking-form input:focus,
+.home-booking-form textarea:focus {
+    border-color: #009fe3;
+}
+
+.home-booking-form textarea {
+    height: 75px;
+    resize: none;
+}
+
+.home-booking-form button {
+    margin-top: 4px;
+    padding: 14px 45px;
+    border: none;
+    background-color: #d60000;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.home-booking-form button:hover {
+    background-color: #a90000;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 991.98px) {
+    .home-booking-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-booking-image {
+        min-height: 420px;
+    }
+
+    .home-booking-image img {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-booking-section {
+        padding: 42px 12px;
+    }
+
+    .home-booking-image {
+        min-height: 280px;
+        padding: 8px;
+    }
+
+    .home-booking-image img {
+        min-height: 264px;
+    }
+
+    .home-booking-form-box {
+        padding: 32px 20px;
+    }
+
+    .home-booking-form-box h2 {
+        font-size: 29px;
+    }
+
+    .home-booking-form-box p {
+        font-size: 14px;
+    }
+}
+
+/* Khu vuc doi net ve quan */
+.about-restaurant-section {
+    padding: 70px 16px;
+    background: linear-gradient(135deg, #079bd3 0%, #0aa8df 100%);
+    overflow: hidden;
+}
+
+.about-restaurant-container {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 52% 48%;
+    align-items: center;
+    gap: 34px;
+}
+
+.about-paper-box {
+    padding: 45px 50px;
+    position: relative;
+    z-index: 2;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+    text-align: left;
+    transform: rotate(-1deg);
+}
+
+.about-small-title {
+    margin: 0 0 6px;
+    color: #333333;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.about-paper-box h2 {
+    margin: 0;
+    color: #e21d1d;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.3;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.about-text {
+    margin: 20px 0 25px;
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.about-more-btn {
+    padding: 13px 35px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #e21d1d;
+    color: #ffffff;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.about-more-btn:hover {
+    background-color: #b91414;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.about-image-group {
+    min-height: 500px;
+    position: relative;
+}
+
+.about-image {
+    overflow: hidden;
+    border: 8px solid #ffffff;
+    background-color: #eeeeee;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.about-image-main {
+    width: 42%;
+    height: 300px;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    z-index: 2;
+}
+
+.about-image-top {
+    width: 55%;
+    height: 220px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.about-image-bottom {
+    width: 55%;
+    height: 230px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+    .about-restaurant-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-paper-box {
+        transform: none;
+    }
+
+    .about-image-group {
+        min-height: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    .about-image-main,
+    .about-image-top,
+    .about-image-bottom {
+        width: 100%;
+        height: 240px;
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-restaurant-section {
+        padding: 46px 12px;
+    }
+
+    .about-paper-box {
+        padding: 32px 22px;
+    }
+
+    .about-small-title {
+        font-size: 18px;
+    }
+
+    .about-paper-box h2 {
+        font-size: 24px;
+    }
+
+    .about-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .about-image-group {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image-main,
+    .about-image-top,
+    .about-image-bottom {
+        height: 230px;
+    }
+}
+
+/* Footer trang chu */
+.home-footer-section {
+    padding: 35px 0 25px;
+    background-color: #079bd3;
+    color: #ffffff;
+}
+
+.home-footer-top {
+    width: min(1400px, 96%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.home-footer-info {
+    min-height: 360px;
+    padding: 45px 55px;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.home-footer-info h2 {
+    margin: 0 0 35px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 1.25;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 rgba(226, 29, 29, 0.75);
+}
+
+.footer-info-item {
+    margin-bottom: 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.footer-info-item:last-child {
+    margin-bottom: 0;
+}
+
+.footer-info-item i {
+    flex: 0 0 auto;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.footer-info-item strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.footer-info-item p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.home-footer-map {
+    min-height: 360px;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.home-footer-map img {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    display: block;
+    object-fit: cover;
+}
+
+.home-footer-map-empty {
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.home-footer-tags {
+    width: min(900px, 94%);
+    margin: 35px auto 25px;
+    text-align: left;
+}
+
+.home-footer-tags h3 {
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 rgba(226, 29, 29, 0.75);
+}
+
+.footer-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-tag-list a {
+    padding: 10px 15px;
+    border-radius: 4px;
+    background-color: #e21d1d;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-tag-list a:hover {
+    background-color: #b91414;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.home-footer-social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.home-footer-social a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.home-footer-social a:hover {
+    background-color: #e21d1d;
+    color: #ffffff;
+}
+
+.home-footer-copyright {
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+}
+
+@media (max-width: 991.98px) {
+    .home-footer-top {
+        grid-template-columns: 1fr;
+    }
+
+    .home-footer-info {
+        min-height: 0;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-footer-info h2 {
+        font-size: 24px;
+    }
+
+    .footer-info-item {
+        gap: 14px;
+    }
+
+    .footer-info-item i {
+        font-size: 28px;
+    }
+
+    .footer-info-item strong,
+    .footer-info-item p {
+        font-size: 15px;
+    }
+
+    .home-footer-tags {
+        text-align: center;
+    }
+
+    .home-footer-tags h3 {
+        font-size: 20px;
+    }
+
+    .footer-tag-list {
+        justify-content: center;
+    }
+}
+
+/* Khung noi dung noi tren nen trang chu */
+.home-section-card {
+    width: min(1280px, 94%);
+    margin: 45px auto;
+    padding: 45px 35px;
+    background-color: #fffdf8;
+    border: 1px solid rgba(122, 31, 31, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(93, 52, 20, 0.12);
+    overflow: hidden;
+}
+
+.main-menu-section,
+.featured-section,
+.home-booking-section,
+.about-restaurant-section {
+    padding: 1px 0;
+    background: transparent;
+}
+
+.main-menu-wrapper {
+    width: min(1100px, 100%);
+}
+
+.home-booking-container {
+    width: 100%;
+    box-shadow: none;
+}
+
+.about-restaurant-container {
+    width: 100%;
+}
+
+@media (max-width: 991.98px) {
+    .home-section-card {
+        margin: 30px auto;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-section-card {
+        width: 94%;
+        padding: 25px 15px;
+        border-radius: 12px;
+    }
+}
+
+/* Footer trang chu - layout hien dai */
+.home-footer-section {
+    padding: 55px 0 30px;
+    background: linear-gradient(135deg, #049bd3, #007fb3);
+    color: white;
+}
+
+.home-footer-container {
+    width: min(1280px, 94%);
+    margin: 0 auto;
+}
+
+.home-footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.home-footer-info,
+.home-footer-map {
+    min-height: 360px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.home-footer-info {
+    padding: 45px 50px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+}
+
+.home-footer-info h2 {
+    margin: 0 0 35px;
+    color: white;
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 1.25;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 #d71920;
+}
+
+.footer-info-list {
+    display: grid;
+    gap: 26px;
+}
+
+.footer-info-item {
+    margin-bottom: 0;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.footer-info-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-info-icon i {
+    color: white;
+    font-size: 24px;
+}
+
+.footer-info-content strong {
+    display: block;
+    margin-bottom: 7px;
+    color: white;
+    font-size: 17px;
+}
+
+.footer-info-content p {
+    margin: 0;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.home-footer-map {
+    background: #e5e5e5;
+}
+
+.home-footer-map img {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+.home-footer-map-empty {
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.home-footer-bottom {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.home-footer-tags {
+    width: auto;
+    margin: 0 0 28px;
+    text-align: center;
+}
+
+.home-footer-tags h3 {
+    margin: 0 0 15px;
+    color: white;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #d71920;
+}
+
+.footer-tag-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-tag-list a {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #e21d1d;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.footer-tag-list a:hover {
+    background: #b90000;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.home-footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 0 0 22px;
+}
+
+.home-footer-social a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.16);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.25s;
+}
+
+.home-footer-social a:hover {
+    background: #e21d1d;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.home-footer-copyright {
+    margin: 0;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+}
+
+.home-footer-section + footer,
+.home-footer-section + .footer {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .home-footer-main {
+        grid-template-columns: 1fr;
+    }
+
+    .home-footer-info {
+        padding: 35px 30px;
+    }
+
+    .home-footer-info h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-footer-section {
+        padding: 40px 0 25px;
+    }
+
+    .home-footer-info {
+        padding: 28px 22px;
+    }
+
+    .footer-info-item {
+        gap: 14px;
+    }
+
+    .footer-info-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .footer-info-icon i {
+        font-size: 20px;
+    }
+
+    .home-footer-info h2 {
+        font-size: 24px;
+    }
+
+    .footer-info-content p {
+        font-size: 14px;
+    }
+
+    .home-footer-map img,
+    .home-footer-map-empty {
+        min-height: 260px;
+    }
+
+    .footer-tag-list {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,180 @@
+.about-container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.about-breadcrumb {
+    background: #f2f2f2;
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+.about-breadcrumb a {
+    color: #333;
+    text-decoration: none;
+}
+
+.about-breadcrumb a:hover {
+    color: #009fe3;
+}
+
+.about-breadcrumb span {
+    margin-right: 6px;
+    color: #777;
+}
+
+.about-page,
+.about-section,
+.about-contact-section {
+    background: #ffffff;
+    padding: 55px 0;
+}
+
+.about-page h1 {
+    text-align: center;
+    color: #009fe3;
+    font-size: 38px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.about-lead {
+    text-align: center;
+    color: #111;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.about-content,
+.about-section p,
+.about-contact-section p {
+    color: #222;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.about-greeting {
+    color: #009fe3;
+    font-weight: 700;
+}
+
+.about-section h2 {
+    color: #111;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.about-image-box {
+    width: min(760px, 100%);
+    margin: 30px auto 0;
+    overflow: hidden;
+}
+
+.about-image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.about-image-caption {
+    margin-top: 15px;
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.about-no-image {
+    width: min(760px, 100%);
+    margin: 30px auto 0;
+    padding: 80px 20px;
+    text-align: center;
+    color: #777;
+    background: #f2f2f2;
+    border: 1px dashed #ccc;
+}
+
+.about-contact-info {
+    color: red;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.about-contact-info p {
+    color: red;
+    margin: 6px 0;
+}
+
+.about-contact-section a {
+    color: #f0a000;
+    font-weight: 700;
+}
+
+.about-contact-section a:hover {
+    color: #d71920;
+}
+
+.about-share-box {
+    margin-top: 25px;
+    padding: 18px 20px;
+    background: #eeeeee;
+    border-radius: 6px;
+}
+
+.about-share-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.about-share-icons a {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #009fe3;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.about-share-icons a:hover {
+    background: #d71920;
+}
+
+@media (max-width: 768px) {
+    .about-page,
+    .about-section,
+    .about-contact-section {
+        padding: 40px 0;
+    }
+
+    .about-page h1 {
+        font-size: 28px;
+    }
+
+    .about-lead {
+        font-size: 15px;
+    }
+
+    .about-content,
+    .about-section p,
+    .about-contact-section p {
+        font-size: 15px;
+    }
+
+    .about-section h2 {
+        font-size: 21px;
+    }
+
+    .about-image-caption {
+        font-size: 15px;
+    }
+}

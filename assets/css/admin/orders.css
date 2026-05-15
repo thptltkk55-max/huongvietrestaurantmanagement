@@ -1,0 +1,11 @@
+.order-total-box,
+.card .ms-auto {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.orders-money {
+    color: #dc2626;
+    font-weight: 900;
+}

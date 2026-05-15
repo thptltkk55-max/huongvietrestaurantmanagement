@@ -1,0 +1,258 @@
+.food-detail-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+.food-detail-breadcrumb {
+    background: #f2f2f2;
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+.food-detail-breadcrumb a {
+    color: #333;
+    text-decoration: none;
+}
+
+.food-detail-breadcrumb a:hover {
+    color: #009fe3;
+}
+
+.food-detail-breadcrumb span {
+    margin-right: 6px;
+    color: #777;
+}
+
+.food-detail-page {
+    padding: 50px 0 80px;
+    background: #ffffff;
+}
+
+.food-detail-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.food-detail-sidebar {
+    border: 1px solid #ddd;
+    background: white;
+}
+
+.food-detail-sidebar-title {
+    background: #009fe3;
+    color: white;
+    text-align: center;
+    padding: 14px 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.food-detail-category-list a {
+    display: block;
+    padding: 14px 18px;
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+}
+
+.food-detail-category-list a:hover,
+.food-detail-category-list a.active {
+    color: #e21d1d;
+    background: #f7f7f7;
+}
+
+.food-detail-box {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.food-detail-image {
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+
+.food-detail-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.food-detail-no-image {
+    height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    background: #f2f2f2;
+}
+
+.food-detail-info h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.food-detail-category,
+.food-detail-status {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.food-detail-price {
+    color: #e21d1d;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.food-detail-description {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.food-detail-booking-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #e21d1d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 800;
+}
+
+.food-detail-booking-btn:hover {
+    background: #b90000;
+    color: white;
+}
+
+.food-detail-not-found {
+    padding: 35px 20px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    color: #777;
+    font-size: 18px;
+    text-align: center;
+}
+
+.related-foods-section {
+    margin-top: 70px;
+}
+
+.related-foods-section h2 {
+    text-align: center;
+    color: #009fe3;
+    font-size: 34px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+}
+
+.related-food-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.related-food-card {
+    background: white;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.related-food-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.related-food-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+}
+
+.related-food-no-image {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+    color: #777;
+}
+
+.related-food-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.related-food-content h3 {
+    font-size: 18px;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.related-food-price {
+    color: #e21d1d;
+    font-weight: 900;
+    margin: 0;
+}
+
+.related-food-empty {
+    text-align: center;
+    color: #777;
+    padding: 30px;
+    background: #f7f7f7;
+}
+
+@media (max-width: 992px) {
+    .food-detail-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .food-detail-box {
+        grid-template-columns: 1fr;
+    }
+
+    .related-food-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .food-detail-page {
+        padding: 35px 0 60px;
+    }
+
+    .food-detail-image img,
+    .food-detail-no-image {
+        height: 260px;
+    }
+
+    .food-detail-info h1 {
+        font-size: 24px;
+    }
+
+    .related-food-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .related-foods-section h2 {
+        font-size: 26px;
+    }
+}

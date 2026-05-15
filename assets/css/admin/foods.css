@@ -1,0 +1,10 @@
+.food-thumb,
+.table img {
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    object-fit: cover;
+}
+
+.food-description-cell {
+    max-width: 280px;
+}

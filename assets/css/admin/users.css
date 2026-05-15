@@ -1,0 +1,4 @@
+.users-table td:nth-child(4),
+body .table td:nth-child(4) {
+    word-break: break-word;
+}
